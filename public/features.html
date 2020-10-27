@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/utilities.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+
     <title>ELK @ NIPNE-HH | DFCTI</title>
 </head>
 
@@ -29,35 +32,88 @@
     <!-- Head -->
     <section class="features-head bg-primary py-3">
         <div class="container grid">
-            <div>
+            <div class="showcase-text">
                 <h1 class="xl">Features</h1>
                 <p class="lead">
                     Overall workflow for the ELK service developed @NIPNE-HH | DFCTI.
                 </p>
             </div>
-            <img src="../images/cloud.png" alt="">
+            <div class="showcase-text2">
+                <img src="../images/cloud.png" alt="" style="width: 100%;">
+            </div>
         </div>
     </section>
 
     <!-- Sub head -->
     <section class="features-sub-head bg-light py-3">
-        <div class="container grid">
-            <div>
-                <h1 class="md">The current ELK platform</h1>
-                <p>Currently, there are two main development pipelines which involve log analysis. Each pipeline is a fully fledged ELK stack that runs on <code>elk.nipne.ro</code> VM, ingesting logs from different sources, both with completely different
-                    log formats, then the parsed data are stored into separate indexes. With Kibana, visualizing & interpreting the data from each index is straightforward.</p>
+        <div class="container">
+            <div class="container grid">
+                <div>
+                    <h1 class="md">The current ELK platform</h1>
+                    <p>Currently, there are two main development pipelines which involve log analysis. Each pipeline is a fully fledged ELK stack that runs on <code>elk.nipne.ro</code> VM, ingesting logs from different sources, both with completely different
+                        log formats, then the parsed data are stored into separate indices. With Kibana, visualizing & interpreting the data from each index is straightforward.</p>
+                </div>
+                <div>
+                    <img src="../images/server2.png" alt="">
+                </div>
             </div>
-            <img src="../images/server2.png" alt="">
         </div>
     </section>
+
+    <!-- Sub head -->
+    <section class="features-sub-head bg-light py-3">
+        <div class="container">
+            <div class="container grid">
+                <div>
+                    <h1 class="md"> <i class="fas fa-cubes"></i> Services</h1>
+                    <p>The <code>elk.nipne.ro</code> virtual machine has also other development projects that focus on numerical programming, web development or software development.</p>
+                    <ul style="list-style-type: square ;padding-left: 25px;">
+                        <li>
+                            <p>A live-server that supports Visual Studio Code through the browser. This is accessible via web through <code>HTTPS</code>:
+                                <a href="https://github.com/cdr/code-server"> <i class="fab fa-microsoft"></i> code-server</a>.
+                            </p>
+                        </li>
+                        <li>
+                            <p>NGINX reverse proxy for accessing Kibana UI through the browser.</p>
+                        </li>
+                        <li>
+                            <p>A full-stack <code>MEAN</code> application developed with Angular, that uploads any log-file to MongoDB but also sends the files further to the logstash instance which runs on the VM.
+                                <a href="https://github.com/basavyr/elk_mean_loggingWebApp"><i class="fab fa-github"></i> See project here.</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>An <a href="https://xrootd.slac.stanford.edu/">XROOTD</a> environment that allows the user to develop new methods and implementations for the framework.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="/images/elk-stack-elkb-diagram.svg" alt="" style="width: 100%;">
+                    <!-- <a href="https://github.com/basavyr/elk_NIPNE_DFCTI/blob/master/ELKsetupDFCTI.png"><img src="../images/ELKsetupDFCTI.png" alt="" style="width: 100%;"></a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Sub head -->
     <section class="features-sub-head bg-light py-3">
         <div class="container">
 
         </div>
         <div class="container grid">
-            <div class="card">x</div>
-            <div class="card">x</div>
+            <div class="card" style="background-color:thistle;">
+                <i class="fas fa-info-circle fa-2x"></i>
+                <p>Parsing logs from a <a href="https://slurm.schedmd.com/documentation.html">SLURM</a> workload manager. A logstash configuration pipeline that listens on incoming <a href="https://www.elastic.co/beats/filebeat">beats</a> on port <code>5044</code>.</p>
+                <p>The incoming logs have a special format that requires a <code>grok</code> pattern and some <code>kv</code> filters. Data is also aggregated, and additional fields are created based on the existing ones for providing more information.</p>
+                <p><a href="https://github.com/basavyr/elk_NIPNE_DFCTI"><i class="fab fa-github fa-2x"></i> Project</a></p>
+            </div>
+            <div class="card" style="background-color:goldenrod;">
+                <i class="fas fa-info-circle fa-2x"></i>
+                <p>Logstash is configured to listen on the same port, but it is ingesting logs from a difference source: <code>nova-compute-nodes</code> (kubernetes cluster).</p>
+                <p>The logs are delivered through <code>filebeat</code>, which is pre-configured on the external cluster to create unique tags and identifiers for each log file (current pipeline supports file batch ingesting). Logstash then sends each file
+                    to the same ES. index.</p>
+                <p><a href="https://github.com/basavyr/ELK-Stack-macOS"><i class="fab fa-github fa-2x"></i>Project</a> </p>
+            </div>
+
         </div>
     </section>
 

@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+
     <title>ELK @ NIPNE-HH | DFCTI</title>
 </head>
 
@@ -15,15 +19,19 @@
     <!-- Navbar -->
     <div class="navbar">
         <div class="container flex">
-            <h1 class="logo"><a href="index.html">ELK Stack @ DFCTI</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="/public/features.html">Features</a></li>
-                    <li><a href="/public/docs.html">Docs</a></li>
-                    <li><a href="/public/aboutme.html">About</a></li>
-                </ul>
-            </nav>
+            <div>
+                <h1 class="logo"><a href="index.html">ELK Stack @ DFCTI</a></h1>
+            </div>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/public/features.html">Features</a></li>
+                        <li><a href="/public/docs.html">Docs</a></li>
+                        <li><a href="/public/aboutme.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
 
@@ -44,12 +52,12 @@
     <!-- Stats -->
     <section class="stats">
         <div class="container">
-            <div class="  container ">
+            <div class=" container ">
                 <h3 class="stats-heading text-center my-1">
                     Elasticsearch-Logstash-Kibana full stack service developed on a dedicated server.
                 </h3>
             </div>
-            <div class="container ">
+            <div class="container " style="padding-top: 30px;">
                 <ul style="list-style-type: circle;">
                     <li>The entire stack works on a CentOS 7 virtual machine, inside the DFCTI data center.</li>
                     <li>Communication between each service inside the ELK stack is encrypted with TLS.</li>
@@ -67,7 +75,7 @@
                 <div class="card">
                     <img src="images/logos/logstash.png" alt="" style="width: 50%;">
                     <h3>Logstash</h3>
-                    <p class="text-secondary">Data processing pipeline that ingests & transforms data from a multitude of sources then outputs it to ES."</p>
+                    <p class="text-secondary">Data processing pipeline that ingests & transforms data from a multitude of sources then outputs it to ES.</p>
                 </div>
                 <div class="card">
                     <img src="images/logos/kibana.png" alt="" style="width: 50%;">

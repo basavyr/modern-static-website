@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
 :root {
     --primary-color: #1e90ff;
     --secondary-color: #002240;
@@ -33,6 +34,7 @@ ul {
 a {
     text-decoration: none;
     color: #333;
+    font-weight: bold;
 }
 
 h1,
@@ -52,8 +54,8 @@ img {
 
 code,
 pre {
-    background: #333;
-    color: whitesmoke;
+    /* background: #333; */
+    color: #333;
     padding: 1px;
     border-radius: 5px;
     font-family: 'Courier New', Courier, monospace;
@@ -92,6 +94,7 @@ pre {
 
 .navbar a {
     color: #333;
+    /* background-color: whitesmoke; */
     padding: 10px;
     margin: 0 5px;
 }
@@ -130,11 +133,11 @@ pre {
 }
 
 .showcase-text {
-    animation: slideInFromLeft 1s ease-in;
+    animation: slideInFromLeft 0.6s ease-in;
 }
 
 .showcase-text2 {
-    animation: slideInFromRight 0.85s ease-in;
+    animation: slideInFromRight 0.65s ease-in;
 }
 
 .showcase-form {
@@ -145,7 +148,7 @@ pre {
     padding: 40px;
     z-index: 100;
     justify-self: flex-end;
-    animation: slideInFromRight 1s ease-in;
+    animation: slideInFromRight 0.6s ease-in;
 }
 
 .showcase-form .form-control {
@@ -173,7 +176,7 @@ pre {
     bottom: -70px;
     right: 0;
     left: 0;
-    background: #fff;
+    background: white;
     transform: skewY(-3deg);
     -webkit-transform: skewY(-3deg);
     -moz-transform: skewY(-3deg);
@@ -185,7 +188,7 @@ pre {
 
 .stats {
     padding-top: 100px;
-    animation: slideInFromBottom 1s ease-in;
+    animation: slideInFromBottom 0.8s ease-in-out;
 }
 
 .stats-heading {
@@ -357,7 +360,7 @@ pre {
 
 /* Tablets and under */
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .grid,
     .showcase .grid,
     .stats .grid,
@@ -369,17 +372,26 @@ pre {
         grid-template-rows: 1fr;
     }
     .showcase {
-        height: 450px;
+        height: 700px;
+    }
+    .showcase img {
+        width: 50%;
+        padding-bottom: 50px;
     }
     .showcase-text {
-        text-align: center;
+        text-align: left;
         margin-top: 40px;
-        animation: slideInFromTop 1s ease-in;
+        animation: slideInFromTop 0.8s ease-in;
+    }
+    .showcase-text2 {
+        text-align: left;
+        margin-top: 40px;
+        animation: slideInFromBottom 0.85s ease-in;
     }
     .showcase-form {
         justify-self: center;
         margin: auto;
-        animation: slideInFromBottom 1s ease-in;
+        animation: slideInFromBottom 0.8s ease-in;
     }
     .cli .grid>*:first-child {
         grid-column: 1;
@@ -388,7 +400,7 @@ pre {
     .features-head,
     .features-sub-head,
     .docs-head {
-        text-align: center;
+        text-align: left;
     }
     .features-head img,
     .features-sub-head img,
@@ -406,16 +418,26 @@ pre {
 
 @media (max-width: 500px) {
     .navbar {
-        height: 110px;
+        height: 120px;
     }
     .navbar .flex {
         flex-direction: column;
     }
+    /* .logo {
+        font-weight: 4vh;
+    } */
     .navbar ul {
         padding: 10px;
-        background-color: rgba(0, 0, 0, 0.1);
+        /* background-color: rgba(0, 0, 0, 0.1); */
+    }
+    .showcase {
+        height: 700px;
+    }
+    .showcase img {
+        width: 60%;
+        padding-bottom: 50px;
     }
     .showcase-form {
-        width: 300px;
+        width: 400px;
     }
 }
