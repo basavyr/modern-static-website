@@ -1,4 +1,4 @@
-# Modern Website Deisgn (2020)
+# Modern Website Design (2020)
 
 This repository contains a static website developed with HTML5 and modern CSS techniques such as CSS Grid, Flexbox, psuedo selectors, animation and more. Focus on making a modern look with a 2020 vibe is the main goal.
 
