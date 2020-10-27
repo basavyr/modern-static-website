@@ -52,7 +52,7 @@ img {
 
 code,
 pre {
-    background: darkslateblue;
+    background: #333;
     color: whitesmoke;
     padding: 1px;
     border-radius: 5px;
@@ -131,6 +131,10 @@ pre {
 
 .showcase-text {
     animation: slideInFromLeft 1s ease-in;
+}
+
+.showcase-text2 {
+    animation: slideInFromRight 0.85s ease-in;
 }
 
 .showcase-form {

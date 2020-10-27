@@ -32,10 +32,10 @@
             <div>
                 <h1 class="xl">Features</h1>
                 <p class="lead">
-                    Check out the features of Loruki that separate us from the competition
+                    Overall workflow for the ELK service developed @NIPNE-HH | DFCTI.
                 </p>
             </div>
-            <img src="images/server.png" alt="">
+            <img src="../images/cloud.png" alt="">
         </div>
     </section>
 
@@ -43,12 +43,21 @@
     <section class="features-sub-head bg-light py-3">
         <div class="container grid">
             <div>
-                <h1 class="md">The Loruki Platform</h1>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor cupiditate dignissimos temporibus perspiciatis quae! Suscipit qui, consectetur ea consequatur, doloribus repellendus quasi, aut corporis nam alias culpa. Nostrum, inventore accusantium!
-                </p>
+                <h1 class="md">The current ELK platform</h1>
+                <p>Currently, there are two main development pipelines which involve log analysis. Each pipeline is a fully fledged ELK stack that runs on <code>elk.nipne.ro</code> VM, ingesting logs from different sources, both with completely different
+                    log formats, then the parsed data are stored into separate indexes. With Kibana, visualizing & interpreting the data from each index is straightforward.</p>
             </div>
-            <img src="images/server2.png" alt="">
+            <img src="../images/server2.png" alt="">
+        </div>
+    </section>
+    <!-- Sub head -->
+    <section class="features-sub-head bg-light py-3">
+        <div class="container">
+
+        </div>
+        <div class="container grid">
+            <div class="card">x</div>
+            <div class="card">x</div>
         </div>
     </section>
 
@@ -56,7 +65,7 @@
         <div class="container grid grid-3">
             <div class="card flex">
                 <i class="fas fa-server fa-3x"></i>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nemo saepe corrupti et dolorem voluptate at, nostrum rem voluptatem ab alias quia molestiae ea, libero nihil deserunt. Molestias, eum? Necessitatibus!</p>
+                <p>Reverse proxy with NGINX: allows one to remotely connect to Kibana UI and the ES indices from the browser. Fully supported queries are available in the browser for Kibana and ES.</p>
             </div>
             <div class="card flex">
                 <i class="fas fa-network-wired fa-3x"></i>
