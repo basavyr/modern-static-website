@@ -254,6 +254,14 @@ pre {
 
 /* Features */
 
+.features-main {
+    background-color: whitesmoke;
+}
+
+.features-main ul {
+    background-color: whitesmoke;
+}
+
 .features-head img,
 .docs-head img {
     width: 200px;
