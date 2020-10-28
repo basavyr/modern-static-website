@@ -61,11 +61,14 @@
                 <ul style="list-style-type: circle;">
                     <li>The entire stack works on a CentOS 7 virtual machine, inside the DFCTI data center.</li>
                     <li>Communication between each service inside the ELK stack is encrypted with TLS.</li>
-                    <li>A static web server is deployed through NGINX, which allows external access to the Kibana UI and the main website (i.e. this one).</li>
+                    <li>A static web server is deployed through NGINX, which allows external access to the main website dedicated to this project.</li>
+                    <li>Kibana UI accessible from anywhere through NGINX reverse proxy.</li>
                     <li>Renewable certificate of encryption is configured on the virtual machine through <code>certbot</code>.</li>
+                    <li>Daily maintenance for keeping the ELK stack up-to-date.</li>
                 </ul>
             </div>
-
+        </div>
+        <div class="container">
             <div class="grid grid-3 text-center my-4">
                 <div class="card">
                     <img src="images/logos/elastic.png" alt="" style="width: 50%;">

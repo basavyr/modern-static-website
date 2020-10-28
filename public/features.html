@@ -47,14 +47,14 @@
     <!-- Sub head -->
     <section class="features-sub-head bg-light py-3">
         <div class="container">
-            <div class="container grid">
+            <div class="container grid showcase-text3">
                 <div>
                     <h1 class="md">The current ELK platform</h1>
                     <p>Currently, there are two main development pipelines which involve log analysis. Each pipeline is a fully fledged ELK stack that runs on <code>elk.nipne.ro</code> VM, ingesting logs from different sources, both with completely different
                         log formats, then the parsed data are stored into separate indices. With Kibana, visualizing & interpreting the data from each index is straightforward.</p>
                 </div>
                 <div>
-                    <img src="../images/server2.png" alt="">
+                    <img src="../images/elk-stack-elkb-diagram.svg" alt="" style="width: 100%;">
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@
                     <ul style="list-style-type: square ;padding-left: 25px;">
                         <li>
                             <p>A live-server that supports Visual Studio Code through the browser. This is accessible via web through <code>HTTPS</code>:
-                                <a href="https://github.com/cdr/code-server"> <i class="fab fa-microsoft"></i> code-server</a>.
+                                <a href="https://github.com/cdr/code-server"><i class="fas fa-code"></i> code-server</a>.
                             </p>
                         </li>
                         <li>
@@ -96,8 +96,8 @@
 
     <!-- Sub head -->
     <section class="features-sub-head bg-light py-3">
-        <div class="container">
-
+        <div>
+            <h1 class="container">The two ELK stacks developed at DFCTI and running on the VM</h2>
         </div>
         <div class="container grid">
             <div class="card" style="background-color:thistle;">
@@ -124,34 +124,56 @@
                 <p>Reverse proxy with NGINX: allows one to remotely connect to Kibana UI and the ES indices from the browser. Fully supported queries are available in the browser for Kibana and ES.</p>
             </div>
             <div class="card flex">
-                <i class="fas fa-network-wired fa-3x"></i>
+                <i class="fas fa-cloud fa-3x"></i>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus recusandae perferendis culpa, reiciendis a itaque debitis qui vel dignissimos ipsum!
+                    A static web-server used for storing presentations and reports related to projects within DFCTI. Accessing the files can be done via the browser. See storage space <a href="https://elk.nipne.ro/slides">here</a>.
                 </p>
             </div>
             <div class="card flex">
-                <i class="fas fa-laptop-code fa-3x"></i>
+                <i class="fas fa-tv fa-3x"></i>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, magnam.
+                    Explore the Kibana UI that is running on the VM's localhost (port <code>5601</code>) <a href="https://elk.nipne.ro/kibana">here</a>.
                 </p>
             </div>
             <div class="card flex">
                 <i class="fas fa-database fa-3x"></i>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, a!
+                    See the stored indices that contain documents with the parsed logs on the Elasticsearch server that runs on the VM (localhost on port <code>9200</code>) <a href="https://elk.nipne.ro/elastic">here</a>.
                 </p>
             </div>
             <div class="card flex">
-                <i class="fas fa-power-off fa-3x"></i>
+                <i class="fab fa-angular fa-3x"></i>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, magnam.
+                    MEAN stack application which uploads incoming logs to a cloud-hosted MongoDB and also sends them to the local ES server.
                 </p>
             </div>
             <div class="card flex">
-                <i class="fas fa-upload fa-3x"></i>
+                <i class="fas fa-code fa-3x"></i>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, magnam.
+                    Fully supported C++ and Python environments that allow building and running projects with any configuration methods.
                 </p>
+            </div>
+            <div class="card flex">
+                <i class="fas fa-code fa-3x"></i>
+                <p>
+                    XROOTD client and server frameworks are locally installed. Development on the <code>pyxrootd</code> bindings can be done on a forked repository.
+                </p>
+            </div>
+            <div class="card flex">
+                <i class="fab fa-docker fa-3x"></i>
+                <p>
+                    Docker support for containerization of any development project. Currently supporting containers for Python and C++.
+                </p>
+            </div>
+            <div class="card flex grid2 ">
+                <div>
+                    <img src="/images/xrootd-logo.png" alt="" style="width: 90%;">
+                </div>
+                <div>
+                    <p>
+                        XROOTD client and server frameworks are locally installed. Development on the <code>pyxrootd</code> bindings can be done on a forked repository.
+                    </p>
+                </div>
             </div>
         </div>
     </section>

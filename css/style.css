@@ -140,6 +140,10 @@ pre {
     animation: slideInFromRight 0.65s ease-in;
 }
 
+.showcase-text3 {
+    animation: slideInFromBottom 0.65s ease-in;
+}
+
 .showcase-form {
     position: relative;
     top: 60px;
@@ -375,8 +379,9 @@ pre {
         height: 700px;
     }
     .showcase img {
+        /* width: 50%; */
+        /* padding-bottom: 50px; */
         width: 50%;
-        padding-bottom: 50px;
     }
     .showcase-text {
         text-align: left;
@@ -385,6 +390,8 @@ pre {
     }
     .showcase-text2 {
         text-align: left;
+        /* width: 50%; */
+        /* align-content: center; */
         margin-top: 40px;
         animation: slideInFromBottom 0.85s ease-in;
     }
@@ -439,5 +446,17 @@ pre {
     }
     .showcase-form {
         width: 400px;
+    }
+    .showcase-text {
+        text-align: left;
+        margin-top: 40px;
+        animation: slideInFromTop 0.8s ease-in;
+    }
+    .showcase-text2 {
+        text-align: left;
+        /* align-content: center; */
+        margin-top: 40px;
+        /* width: 50%; */
+        animation: slideInFromBottom 0.85s ease-in;
     }
 }
