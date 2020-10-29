@@ -305,8 +305,18 @@ pre {
 /* Docs */
 
 .docs-main h3 {
-    margin: 20px 0;
+    margin: 10px 0px;
 }
+
+.docs-main .card {
+    margin: 10px;
+    width: 220px;
+}
+
+
+/* .docs-main .container .card {
+    width: 220px;
+} */
 
 .docs-main .grid {
     grid-template-columns: 1fr 2fr;
@@ -318,6 +328,10 @@ pre {
     padding-bottom: 5px;
     margin-bottom: 5px;
     border-bottom: 1px #ccc solid;
+}
+
+.docs-main flex {
+    flex-direction: column;
 }
 
 .docs-main a:hover {

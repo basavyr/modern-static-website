@@ -48,19 +48,71 @@
         <div class="container">
 
             <div>
-                <h2>Introduction</h2>
                 <p>The environment used for the ELK stack project is a virtual machine running CentOS 7.</p>
+                <p>The available services can be accessed from the cards below.</p>
             </div>
+
+            <div class="container grid py-3">
+                <div class="card flex">
+                    <h4>Resources Storage Space </h4>
+                    <img src="../images/logos/elastic.png" alt="">
+                </div>
+                <div class="card flex">
+                    <h4>Kibana UI</h4>
+                    <img src="../images/logos/kibana.png" alt="">
+                </div>
+                <div class="card flex">
+                    <h4>ES</h4>
+                    <img src="../images/logos/elastic.png" alt="">
+                </div>
+                <div class="card flex">
+                    <h4>VS Code - Remote</h4>
+                    <img src="../images/logos/elastic.png" alt="">
+                </div>
+
+            </div>
+
 
             <div class="alert alert-success">
                 <i class="fas fa-info"></i>Root access is granted while using the VM, which assures a proper administration (e.g. installing latest updates, fixing any issues that affect the services, monitoring the firewall, renewing SSL certificates
                 and so on).
             </div>
 
-            <div>
-                <h2>VM: System details</h2>
-                <code>Linux elk.nipne.ro 3.10.0-1127.19.1.el7.x86_64 #1 SMP x86_64 x86_64 x86_64 GNU/Linux</code>
+            <div class="alert alert-error">
+                <i class="fas fa-certificate"></i>SSL Certificate must be renewed periodically: certbot
             </div>
+
+            <div>
+                <h2><i class="fas fa-server"></i> VM: System details</h2>
+                <code>Linux elk.nipne.ro 3.10.0-1127.19.1.el7.x86_64 #1 SMP x86_64 x86_64 x86_64 GNU/Linux</code>
+                <div><img src="../images/htop.png" alt=""></div>
+            </div>
+
+            <div>
+                <h2><i class="fas fa-laptop-code"></i> Development services</h2>
+
+                <div>
+                    <h3>Python</h3>
+                    <pre><code>[root@elk robert.poenaru]# python3 --version
+Python 3.6.8</code>
+                </pre>
+                </div>
+
+                <h3>NodeJS</h3>
+                <pre><code>[root@elk robert.poenaru]# node -v
+v10.17.0
+                </code></pre>
+                <h3>C++</h3>
+                <pre class="container"><code>[root@elk robert.poenaru]# g++ -v
+Using built-in specs.
+COLLECT_GCC=g++
+COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-8/root/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper
+Target: x86_64-redhat-linux
+Thread model: posix
+gcc version 8.3.1 20190311 (Red Hat 8.3.1-3) (GCC)
+                </code></pre>
+            </div>
+
 
             <div>
                 <h2>Running daemons</h2>
@@ -121,7 +173,7 @@ Oct 29 18:59:15 elk.nipne.ro systemd[1]: Started logstash.
 
             <div>
                 <h3>NGINX</h3>
-                <pre><code>
+                <pre class="container"><code>
 [root@elk robert.poenaru]# systemctl status nginx
 ● nginx.service - nginx - high performance web server
 Loaded: loaded (/usr/lib/systemd/system/nginx.service; disabled; vendor preset: disabled)
