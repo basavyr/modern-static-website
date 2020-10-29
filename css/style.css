@@ -310,17 +310,9 @@ pre {
 
 .docs-main .card {
     margin: 10px;
-    width: 220px;
-}
-
-
-/* .docs-main .container .card {
-    width: 220px;
-} */
-
-.docs-main .grid {
-    grid-template-columns: 1fr 2fr;
-    align-items: flex-start;
+    width: 90%;
+    padding: 10px;
+    color: #333;
 }
 
 .docs-main nav li {
@@ -328,10 +320,6 @@ pre {
     padding-bottom: 5px;
     margin-bottom: 5px;
     border-bottom: 1px #ccc solid;
-}
-
-.docs-main flex {
-    flex-direction: column;
 }
 
 .docs-main a:hover {
