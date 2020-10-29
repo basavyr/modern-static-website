@@ -59,6 +59,7 @@ pre {
     padding: 1px;
     border-radius: 5px;
     font-family: 'Courier New', Courier, monospace;
+    text-align: left;
 }
 
 .hidden {
@@ -304,12 +305,14 @@ pre {
 /* Docs */
 
 .docs-main h3 {
-    margin: 20px 0;
+    margin: 10px 0px;
 }
 
-.docs-main .grid {
-    grid-template-columns: 1fr 2fr;
-    align-items: flex-start;
+.docs-main .card {
+    margin: 10px;
+    width: 90%;
+    padding: 10px;
+    color: #333;
 }
 
 .docs-main nav li {

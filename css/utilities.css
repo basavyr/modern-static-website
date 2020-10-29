@@ -141,11 +141,15 @@
 .alert-success {
     background-color: var(--success-color);
     color: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .alert-error {
     background-color: var(--error-color);
+    border-radius: 5px;
     color: #fff;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .flex {
