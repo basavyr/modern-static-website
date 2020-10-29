@@ -45,54 +45,111 @@
 
     <!-- Docs main -->
     <section class="docs-main my-4">
-        <div class="container grid">
-            <div class="card bg-light p-3">
-                <h3 class="my-2">Essentials</h3>
-                <nav>
-                    <ul>
-                        <li><a class="text-primary" href="#">Introduction</a></li>
-                        <li><a href="#">About ELK</a></li>
-                        <li><a href="#">Usage</a></li>
-                    </ul>
-                </nav>
+        <div class="container">
 
-                <h3 class="my-2">Deployments</h3>
-                <nav>
-                    <ul>
-                        <li><a href="#">Setting up a container</a></li>
-                        <li><a href="#">Using the CLI</a></li>
-                        <li><a href="#">Remote development</a></li>
-                        <li><a href="#">Managing resources</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="card">
+            <div>
                 <h2>Introduction</h2>
                 <p>The environment used for the ELK stack project is a virtual machine running CentOS 7.</p>
-
-                <div class="alert alert-success">
-                    <i class="fas fa-info"></i>Root access is granted while using the VM, which assures a proper administration (e.g. installing latest updates, fixing any issues that affect the services, monitoring the firewall, renewing SSL certificates
-                    and so on).
-                </div>
-
-                <h3>Running daemons</h3>
-                <p>There are multiple system services (daemons) that run 24/7 on the background within the virtual machine.</p>
-                <a href="features.html" class="btn btn-primary">Learn More</a>
-
-                <h3>System details</h3>
-                <ul>
-                    <li>Linux</li>
-                    <li>Node.js v12 or higher</li>
-                </ul>
-
-                <h3>Install</h3>
-                <p>Mac (Homebrew)</p>
-                <pre><code>$ brew install </code></pre>
-                <p>NPM</p>
-                <pre><code>$ npm install </code></pre>
-                <p>Yarn</p>
-                <pre><code>$ yarn install </code></pre>
             </div>
+
+            <div class="alert alert-success">
+                <i class="fas fa-info"></i>Root access is granted while using the VM, which assures a proper administration (e.g. installing latest updates, fixing any issues that affect the services, monitoring the firewall, renewing SSL certificates
+                and so on).
+            </div>
+
+            <div>
+                <h2>VM: System details</h2>
+                <code>Linux elk.nipne.ro 3.10.0-1127.19.1.el7.x86_64 #1 SMP x86_64 x86_64 x86_64 GNU/Linux</code>
+            </div>
+
+            <div>
+                <h2>Running daemons</h2>
+                <p>There are multiple system services (daemons) that run 24/7 on the background within the virtual machine.</p>
+                <!-- <a href="features.html" class="btn btn-primary">Learn More</a> -->
+            </div>
+
+            <div>
+                <h3>Elasticsearch</h3>
+                <pre class="container"><code>
+[root@elk elk]# systemctl status elasticsearch.service
+● elasticsearch.service - Elasticsearch
+Loaded: loaded (/usr/lib/systemd/system/elasticsearch.service; enabled; vendor preset: disabled)
+Active: active (running) since Wed 2020-10-28 13:57:27 EET; 1 day 4h ago
+Docs: https://www.elastic.co
+Main PID: 26099 (java)
+Tasks: 123          
+Memory: 2.7G
+CGroup: /system.slice/elasticsearch.service
+├─26099 /usr/share/elasticsearch/jdk/bin/java -Xshare:auto -Des.networkaddress.cache.ttl=60 -Des.networkaddress.cache.negative...
+└─26359 /usr/share/elasticsearch/modules/x-pack-ml/platform/linux-x86_64/bin/controller
+Oct 28 13:57:02 elk.nipne.ro systemd[1]: Starting Elasticsearch...
+Oct 28 13:57:27 elk.nipne.ro systemd[1]: Started Elasticsearch.   
+                </code></pre>
+            </div>
+            <div>
+                <h3>Kibana</h3>
+                <pre class="container"><code>
+[root@elk robert.poenaru]# systemctl status kibana
+● kibana.service - Kibana
+Loaded: loaded (/etc/systemd/s kibana.service; enabled; v preset: disabled)
+Active: active (running) sinc 2020-10-28 15:10:41 EET; 1 day 3h ago
+Main PID: 28957 (node)
+Tasks: 11
+Memory: 569.3M
+CGroup: /system.slice/kibana.service
+└─28957 /usr/share/kibana/bin/ ./node/bin/node /usr/share kibana/bin/../src/cli
+Oct 28 21:53:24 elk.nipne.ro kibana[28957]: {"type":"response","@timestamp":"2020-10-28T19:53:24Z","tags":[],"pid":28957,"method":...":"37.2
+Oct 28 21:53:24 elk.nipne.ro kibana[28957]: {"type":"response",
+Hint: Some lines were ellipsized, use -l to show in full.
+                </code></pre>
+            </div>
+            <div>
+                <h3>Logstash</h3>
+                <pre class="container"><code>
+[root@elk robert.poenaru]# systemctl status logstash.service
+● logstash.service - logstash
+   Loaded: loaded (/etc/systemd/system/logstash.service; enabled; vendor preset: disabled)
+   Active: active (running) since Thu 2020-10-29 18:59:15 EET; 6s ago
+ Main PID: 8556 (java)
+    Tasks: 24
+   Memory: 513.1M
+   CGroup: /system.slice/logstash.service
+           └─8556 /bin/java -Xms1g -Xmx1g -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnl...
+Oct 29 18:59:15 elk.nipne.ro systemd[1]: Started logstash.
+                </code></pre>
+            </div>
+
+            <div>
+                <h3>NGINX</h3>
+                <pre><code>
+[root@elk robert.poenaru]# systemctl status nginx
+● nginx.service - nginx - high performance web server
+Loaded: loaded (/usr/lib/systemd/system/nginx.service; disabled; vendor preset: disabled)
+Active: active (running) since Wed 2020-10-28 14:53:49 EET; 1 day 4h ago
+Docs: http://nginx.org/en/docs/
+Process: 28737 ExecStart=/usr/sbin/nginx -c /etc/nginx/nginx.conf (code=exited, status=0/SUCCESS)
+Main PID: 28738 (nginx)
+Tasks: 9
+Memory: 17.1M
+CGroup: /system.slice/nginx.service
+            ├─28738 nginx: master process /usr/sbin/nginx -c /etc/nginx/nginx.conf
+            ├─28739 nginx: worker process
+            ├─28740 nginx: worker process
+            ├─28741 nginx: worker process
+            ├─28742 nginx: worker process
+            ├─28743 nginx: worker process
+            ├─28744 nginx: worker process
+            ├─28745 nginx: worker process
+            └─28746 nginx: worker process
+ Oct 28 14:53:49 elk.nipne.ro systemd[1]: Starting nginx - high performance web server...
+Oct 28 14:53:49 elk.nipne.ro systemd[1]: Started nginx - high performance web server.
+                    </code>
+                </pre>
+            </div>
+
+        </div>
+
+
         </div>
     </section>
 

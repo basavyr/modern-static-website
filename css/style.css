@@ -59,6 +59,7 @@ pre {
     padding: 1px;
     border-radius: 5px;
     font-family: 'Courier New', Courier, monospace;
+    text-align: left;
 }
 
 .hidden {
