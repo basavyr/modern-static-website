@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/style.css">
@@ -39,15 +40,16 @@
     <!-- Showcase -->
     <section class="features-head bg-primary py-3">
         <div class="container grid">
-            <!-- <div> -->
             <div class="showcase-text">
-                <h1>Explore & analyze logs using Elasticsearch</h1>
+                <h1 class="md"><b>Explore & Analyze Logs Using Elasticsearch</b></h1>
                 <p>A fully working server which ingests logs (e.g. syslog, system metrics etc.) from any local or external sources. Ingested logs are parsed with Logstash and then the output is sent to Elasticsearch. Log analysis is done through Kibana UI.</p>
                 <a href="./public/features.html" class="btn btn-outline">See More Features</a>
             </div>
-            <!-- <div> -->
             <div class="showcase-text2">
-                <img src="./images/server.png" alt="" style="width: 60%; margin-left: 100px;">
+                <div class="showcase-text2-img-container">
+                    <i class="fas fa-server fa-7x"></i>
+                    <!-- <img src="./images/server.png"> -->
+                </div>
             </div>
         </div>
     </section>
